@@ -15,7 +15,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-change-this-in-produc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.vercel.app', '.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 
+'127.0.0.1', 
+'.vercel.app', 
+'.herokuapp.com',
+"portfolio-5zwu.onrender.com"
+]
 
 
 # Application definition
