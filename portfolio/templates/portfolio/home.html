@@ -1,0 +1,139 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+        <div class="hero-content">
+            <h1 id="hero-title" class="hero-title">
+                Expert en <span class="gradient-text">Intelligence Artificielle</span>
+            </h1>
+            <p class="hero-subtitle">
+                Création de solutions innovantes en IA, Machine Learning et Deep Learning
+            </p>
+            <div class="hero-buttons">
+                <a href="{% url 'projects' %}" class="btn btn-primary">Voir mes projets</a>
+                <a href="{% url 'contact' %}" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-graphic">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills" aria-labelledby="skills-title">
+    <div class="container">
+        <h2 id="skills-title" class="section-title">Compétences</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">🤖</div>
+                <h3>Machine Learning</h3>
+                <p>Modèles prédictifs, classification, régression, clustering</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🧠</div>
+                <h3>Deep Learning</h3>
+                <p>Réseaux de neurones, CNN, RNN, Transformers</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📊</div>
+                <h3>Data Science</h3>
+                <p>Analyse de données, visualisation, traitement</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h3>Développement</h3>
+                <p>Python, TensorFlow, PyTorch, scikit-learn</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">☁️</div>
+                <h3>Large Language Models (LLMs)</h3>
+                <p>Mistral, Claude, GPT, etc.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🔬</div>
+                <h3>Recherche</h3>
+                <p>Publications, innovation, veille technologique</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured-projects" aria-labelledby="projects-title">
+    <div class="container">
+        <h2 id="projects-title" class="section-title">Projets en vedette</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">IA</div>
+                </div>
+                <div class="project-content">
+                    <h3>Reconnaissance d'images</h3>
+                    <p>Modèle de deep learning pour la classification d'images avec une précision de 95%</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">CNN</span>
+                    </div>
+                    <a href="{% url 'projects' %}" class="project-link">En savoir plus →</a>
+                </div>
+            </article>
+            
+            <article class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">ML</div>
+                </div>
+                <div class="project-content">
+                    <h3>Prédiction de séries temporelles</h3>
+                    <p>Système de prédiction utilisant des modèles LSTM pour l'analyse de données temporelles</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">LSTM</span>
+                    </div>
+                    <a href="{% url 'projects' %}" class="project-link">En savoir plus →</a>
+                </div>
+            </article>
+            
+            <article class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">NLP</div>
+                </div>
+                <div class="project-content">
+                    <h3>Traitement du langage naturel</h3>
+                    <p>Modèle de génération de texte utilisant des Transformers pour la compréhension contextuelle</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <a href="{% url 'projects' %}" class="project-link">En savoir plus →</a>
+                </div>
+            </article>
+        </div>
+        <div class="section-cta">
+            <a href="{% url 'projects' %}" class="btn btn-primary">Voir tous les projets</a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" aria-labelledby="cta-title">
+    <div class="container">
+        <div class="cta-content">
+            <h2 id="cta-title">Prêt à collaborer sur votre projet IA ?</h2>
+            <p>Discutons de vos besoins et créons ensemble des solutions innovantes</p>
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-large">Commencer un projet</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

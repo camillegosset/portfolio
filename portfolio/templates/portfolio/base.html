@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>{% block title %}{{ page_title|default:"Camille GOSSET - Experte en Intelligence Artificielle" }}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{{ meta_description|default:"Portfolio d'une experte en Intelligence Artificielle" }}{% endblock %}">
+    <meta name="keywords" content="Intelligence Artificielle, IA, Machine Learning, Deep Learning, Data Science, Portfolio">
+    <meta name="author" content="Camille GOSSET">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{% block canonical_url %}{% endblock %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% block og_title %}{{ page_title|default:"Camille GOSSET" }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{{ meta_description|default:"Portfolio d'un expert en Intelligence Artificielle" }}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% endblock %}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}{{ page_title|default:"Camille GOSSET" }}{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{{ meta_description|default:"Portfolio d'une experte en Intelligence Artificielle" }}{% endblock %}">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="{% url 'home' %}" class="logo" aria-label="Retour à l'accueil">
+                    <span class="logo-text">Camille GOSSET</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" aria-label="Menu mobile" aria-expanded="false" id="mobile-menu-btn">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="{% url 'home' %}" class="nav-link">Accueil</a></li>
+                    <li><a href="{% url 'about' %}" class="nav-link">À propos</a></li>
+                    <li><a href="{% url 'projects' %}" class="nav-link">Projets</a></li>
+                    <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Camille GOSSET</h3>
+                    <p>Experte en Intelligence Artificielle et Machine Learning</p>
+                    <p>Site web développé par Camille GOSSET avec l'aide d'une IA. Contactez-moi pour toute demande de développement de site web.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Accueil</a></li>
+                        <li><a href="{% url 'about' %}">À propos</a></li>
+                        <li><a href="{% url 'projects' %}">Projets</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Réseaux sociaux</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="#" aria-label="GitHub" rel="noopener noreferrer">GitHub</a>
+                        <a href="#" aria-label="Twitter" rel="noopener noreferrer">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {% now "Y" %} CamilLab IA. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    {% load static %}
+    <script src="{% static 'js/main.js' %}" defer></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+

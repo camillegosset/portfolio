@@ -1,0 +1,111 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1>Mes projets</h1>
+        <p>Découvrez une sélection de mes réalisations en Intelligence Artificielle</p>
+    </div>
+</section>
+
+<section class="projects-section">
+    <div class="container">
+        <div class="projects-grid">
+            <article class="project-card-large">
+                <div class="project-image">
+                    <div class="project-placeholder">IA</div>
+                </div>
+                <div class="project-content">
+                    <h2>Reconnaissance d'images avancée</h2>
+                    <p>
+                        Développement d'un modèle de deep learning pour la classification d'images avec 
+                        une architecture CNN personnalisée. Le modèle atteint une précision de 95% sur 
+                        un dataset de 50 000 images.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">CNN</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary">Voir le code</a>
+                        <a href="#" class="btn btn-outline">Documentation</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="project-card-large">
+                <div class="project-image">
+                    <div class="project-placeholder">ML</div>
+                </div>
+                <div class="project-content">
+                    <h2>Prédiction de séries temporelles</h2>
+                    <p>
+                        Système de prédiction utilisant des réseaux LSTM pour l'analyse de données 
+                        temporelles. Application dans le domaine financier pour la prévision de tendances.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">LSTM</span>
+                        <span class="tag">Time Series</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary">Voir le code</a>
+                        <a href="#" class="btn btn-outline">Documentation</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="project-card-large">
+                <div class="project-image">
+                    <div class="project-placeholder">NLP</div>
+                </div>
+                <div class="project-content">
+                    <h2>Traitement du langage naturel</h2>
+                    <p>
+                        Modèle de génération de texte utilisant l'architecture Transformer pour la 
+                        compréhension contextuelle et la génération de contenu cohérent.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">BERT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary">Voir le code</a>
+                        <a href="#" class="btn btn-outline">Documentation</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="project-card-large">
+                <div class="project-image">
+                    <div class="project-placeholder">RL</div>
+                </div>
+                <div class="project-content">
+                    <h2>Reinforcement Learning</h2>
+                    <p>
+                        Agent intelligent utilisant l'apprentissage par renforcement pour résoudre 
+                        des problèmes complexes dans des environnements dynamiques.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">OpenAI Gym</span>
+                        <span class="tag">Q-Learning</span>
+                        <span class="tag">RL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn btn-secondary">Voir le code</a>
+                        <a href="#" class="btn btn-outline">Documentation</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
